@@ -1,0 +1,35 @@
+package org.example.testng.tests;
+
+import org.example.pom.DemoqaForm;
+import org.example.utils.SeleniumDriver;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class FormTest {
+    static public WebDriver driver;
+    public static String URI="https://demoqa.com/automation-practice-form";
+    public static String FIRST_NAME ="Sergiu";
+    public static String LAST_NAME ="Leanca";
+    public static String USER_EMAIL ="leancasergiu278@gmail.com";
+    @BeforeTest
+    public void beforeTest(){
+        driver= SeleniumDriver.getAutoLocalDriver();
+        driver.manage().window().maximize();
+    }
+    @Test
+    public void formTest(){
+        System.out.println("Start test");
+        driver.get(URI);
+        DemoqaForm form = new DemoqaForm(driver);
+        form.setFirstName(FIRST_NAME);
+        form.setLastName(LAST_NAME);
+        form.setUserEmail(USER_EMAIL);
+
+    }
+    @AfterTest
+    public void afterTest(){
+        driver.quit();
+    }
+}
