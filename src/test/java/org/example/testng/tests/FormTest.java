@@ -3,6 +3,7 @@ package org.example.testng.tests;
 import org.example.pom.DemoqaForm;
 import org.example.utils.SeleniumDriver;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -18,11 +19,14 @@ public class FormTest {
     public static String DATE ="24 Jan 2008";
     public static String SUBJECT ="Maths";
     public static String HOBBY ="Music";
+    public static String STATE ="NCR";
+    public static String CITY ="Delhi";
+    public static String SUBMIT;
 
 
     @BeforeTest
     public void beforeTest(){
-        driver= SeleniumDriver.getAutoLocalDriver();
+        driver= SeleniumDriver.getRemoteDriver();
         driver.manage().window().maximize();
     }
     @Test
@@ -38,7 +42,11 @@ public class FormTest {
         form.setDate(DATE);
         form.setSubject(SUBJECT);
         form.setHobby(HOBBY);
-
+        form.setState(STATE);
+        form.setCity(CITY);
+        form.setSubmit(SUBMIT);
+        String actualName = form.getValue("Student Name");
+        Assert.assertEquals(actualName, FIRST_NAME + " " + LAST_NAME);
     }
     @AfterTest
     public void afterTest(){
