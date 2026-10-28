@@ -49,9 +49,10 @@ public class FormTest {
         Assert.assertEquals(actualName, FIRST_NAME + " " + LAST_NAME);
         Thread.sleep(10000);
         System.out.println("Finish test");
-    }
-    @AfterTest
-    public void afterTest(){
         driver.quit();
     }
+//    @AfterTest
+//    public void afterTest(){
+//        driver.quit();
+//    }
 }
