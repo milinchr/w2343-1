@@ -13,6 +13,13 @@ public class FormTest {
     public static String FIRST_NAME ="Sergiu";
     public static String LAST_NAME ="Leanca";
     public static String USER_EMAIL ="leancasergiu278@gmail.com";
+    public static String USER_GENDER ="Male";
+    public static String USER_NUMBER ="0069614900";
+    public static String DATE ="24 Jan 2008";
+    public static String SUBJECT ="Maths";
+    public static String HOBBY ="Music";
+
+
     @BeforeTest
     public void beforeTest(){
         driver= SeleniumDriver.getAutoLocalDriver();
@@ -26,6 +33,11 @@ public class FormTest {
         form.setFirstName(FIRST_NAME);
         form.setLastName(LAST_NAME);
         form.setUserEmail(USER_EMAIL);
+        form.setGender(USER_GENDER);
+        form.setUserNumber(USER_NUMBER);
+        form.setDate(DATE);
+        form.setSubject(SUBJECT);
+        form.setHobby(HOBBY);
 
     }
     @AfterTest
