@@ -3,6 +3,7 @@ package org.example.testng.tests;
 import org.example.pom.DemoqaForm;
 import org.example.utils.SeleniumDriver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -26,7 +27,7 @@ public class FormTest {
 
     @BeforeTest
     public void beforeTest(){
-        driver= SeleniumDriver.getRemoteDriver();
+        driver= new ChromeDriver();
         driver.manage().window().maximize();
     }
     @Test

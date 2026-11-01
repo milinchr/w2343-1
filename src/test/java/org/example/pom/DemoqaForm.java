@@ -57,7 +57,7 @@ public class DemoqaForm {
     }
 
     public void setDate(String dateParam) {
-       date.sendKeys(Keys.COMMAND, "a");
+       date.sendKeys(Keys.CONTROL, "a");
        date.sendKeys(dateParam);
        date.sendKeys(Keys.ENTER);
     }
