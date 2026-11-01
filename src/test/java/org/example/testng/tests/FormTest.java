@@ -27,7 +27,7 @@ public class FormTest {
 
     @BeforeTest
     public void beforeTest(){
-        driver= new ChromeDriver();
+        driver = SeleniumDriver.getRemoteDriver();
         driver.manage().window().maximize();
     }
     @Test
