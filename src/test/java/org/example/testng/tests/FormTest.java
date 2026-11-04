@@ -30,7 +30,7 @@ public class FormTest {
 
     @BeforeTest
     public void beforeTest(){
-        driver = SeleniumDriver.getAutoLocalDriver();
+        driver = SeleniumDriver.getRemoteDriver();
         driver.manage().window().maximize();
     }
     @Test
