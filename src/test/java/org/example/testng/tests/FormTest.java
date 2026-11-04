@@ -51,6 +51,14 @@ public class FormTest {
         form.setSubmit(SUBMIT);
         String actualName = form.getValue("Student Name");
         Assert.assertEquals(actualName, FIRST_NAME + " " + LAST_NAME);
+        String actualEmail = form.getValue("Student Email");
+        Assert.assertEquals(actualEmail, USER_EMAIL);
+        String actualGender = form.getValue("Gender");
+        Assert.assertEquals(actualGender, USER_GENDER);
+        String actualMobile = form.getValue("Mobile");
+        Assert.assertEquals(actualMobile, USER_NUMBER);
+        String actualDate = form.getValue("Date of Birth");
+        Assert.assertEquals(actualDate, DATE);
         Thread.sleep(10000);
         logger.info("Finish test");
     }
