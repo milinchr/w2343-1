@@ -59,6 +59,12 @@ public class FormTest {
         Assert.assertEquals(actualMobile, USER_NUMBER);
         String actualDate = form.getValue("Date of Birth");
         Assert.assertEquals(actualDate, DATE);
+        String actualSubject = form.getValue("Subjects");
+        Assert.assertEquals(actualSubject, SUBJECT);
+        String actualHobby = form.getValue("Hobbies");
+        Assert.assertEquals(actualHobby, HOBBY);
+        String actualStateAndCity = form.getValue("State and City");
+        Assert.assertEquals(actualStateAndCity, STATE + " " + CITY);
         Thread.sleep(10000);
         logger.info("Finish test");
     }
